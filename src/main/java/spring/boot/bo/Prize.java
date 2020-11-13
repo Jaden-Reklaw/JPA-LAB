@@ -5,9 +5,8 @@ import javax.persistence.*;
 @Entity
 public class Prize {
     //region Properties
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "prize_id")
     private Integer Id;
 
     @Version

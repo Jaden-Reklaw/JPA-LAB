@@ -6,9 +6,8 @@ import java.util.List;
 @Entity
 public class State {
     //region Properties
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "state_id")
     private Integer Id;
 
     @Version

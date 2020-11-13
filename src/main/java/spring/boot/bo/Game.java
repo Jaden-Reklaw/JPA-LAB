@@ -6,9 +6,8 @@ import java.util.List;
 @Entity
 public class Game {
     //region Properties
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "game_id")
     private Integer Id;
 
     @Version
@@ -17,7 +16,7 @@ public class Game {
     private String GameName;
 
     //Create relationship One Game Many Prizes
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Prize> prizeList;
 
     //Created relationship Many Games Many States
