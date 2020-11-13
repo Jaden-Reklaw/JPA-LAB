@@ -1,6 +1,7 @@
 package spring.boot.bo;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class State {
@@ -15,6 +16,10 @@ public class State {
 
     private String StateName;
     private String StateInitials;
+
+    //Created relationship Many States Many Games
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Game> gameList;
     //endregion
 
     //region Constructors
@@ -56,6 +61,14 @@ public class State {
 
     public void setStateInitials(String stateInitials) {
         StateInitials = stateInitials;
+    }
+
+    public List<Game> getGameList() {
+        return gameList;
+    }
+
+    public void setGameList(List<Game> gameList) {
+        this.gameList = gameList;
     }
     //endregion
 
