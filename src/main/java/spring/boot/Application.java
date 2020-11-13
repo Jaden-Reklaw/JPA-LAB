@@ -21,6 +21,11 @@ public class Application {
     public CommandLineRunner demo() {
         return (args) -> {
             Log.info("---ITS WORKING---");
+
         }; //end of return
+    }
+
+    public static void InsertData() {
+
     }
 }
