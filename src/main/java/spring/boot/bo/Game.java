@@ -16,7 +16,7 @@ public class Game {
     private String GameName;
 
     //Create relationship One Game Many Prizes
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Prize> prizeList;
 
     //Created relationship Many Games Many States
